@@ -7,10 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+     body {
+       margin: 0;
+       background: linear-gradient( #ff80a0, #ff8000);
+       color: #222;
+       font-family: arial;
+     }
+
+     p {
+       font-size: 1.2rem;
+     }
+
      img,
      video {
        border-radius: 1rem;
-       max-width: 90%;
+       max-width: 100%;
+     }
+
+     #intro {
+       background-color: rgba(255, 0, 0, 0.3);
+       padding: 1rem;
+     }
+
+     #intro > h1 {
+       margin-top: 0;
      }
 
      #content {
@@ -20,22 +40,22 @@
      }
 
      .item {
-       padding: 1rem;
        text-align: center;
-     }
-
-     .item h2 {
-       text-align: left;
+       padding: 1rem;
      }
 
      @media screen and (min-width: 1024px) {
-       video {
-         max-width: calc(1024px - 2rem);
-       }
-
        #content {
          flex-flow: wrap row;
-         justify-content: space-between;
+         justify-content: space-around;
+       }
+
+       .item {
+         max-width: 35%
+       }
+
+       .item h2 {
+         text-align: center;
        }
      }
     </style>
@@ -43,12 +63,15 @@
   </head>
 
   <body>
-    <h1>Hello,</h1>
-    <p>
-      I'm Elliott.
-      <br><br>
-      I'm a little mean to my brother, Owen, but I'm a big help when it comes to cooking.
-    </p>
+    <div id="intro">
+      <h1>Hello,</h1>
+      <p>
+        I'm Elliott.
+        <br><br>
+        I'm a little mean to my brother, Owen, but I'm a big help when it comes to cooking.
+      </p>
+    </div>
+
     <div id="content">
 
       <div class="item">
@@ -57,6 +80,9 @@
       </div>
 
       <div class="item">
+        <h2>
+          This is my new lava lamp. I have it in my workshop!
+        </h2>
         <video controls width="600">
           <source src="https://elliottenos-com.nyc3.cdn.digitaloceanspaces.com/lava_lamp.mp4">
         </video>
