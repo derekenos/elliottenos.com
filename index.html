@@ -65,6 +65,25 @@
      }
     </style>
 
+    <script>
+
+     function getRandomRGBHexString() {
+       return parseInt(Math.random() * 16 ** 6).toString(16).padStart(6, "0");
+     }
+
+     document.addEventListener("DOMContentLoaded", () => {
+       setInterval(() => {
+         const el = document.querySelector("body");
+         const h1 = getRandomRGBHexString();
+         const h2 = getRandomRGBHexString();
+         const h3 = getRandomRGBHexString();
+         const h4 = getRandomRGBHexString();
+         el.style.background = `linear-gradient(#${h1}, #${h2}, #${h3}, #${h4})`;
+       }, 1000);
+     });
+
+    </script>
+
   </head>
 
   <body>
